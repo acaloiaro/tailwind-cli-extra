@@ -6,6 +6,7 @@
 
   outputs = {
     nixpkgs,
+    self,
     systems,
     ...
   }: let
@@ -17,5 +18,9 @@
     in {
       default = callPackage ./. {};
     });
+
+    overlays.default = final: prev: {
+      tailwindcss = self.packages.${final.system}.default;
+    };
   };
 }
