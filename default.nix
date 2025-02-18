@@ -5,7 +5,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "tailwind-cli-extra";
-  version = "1.7.5";
+  version = "1.7.27";
 
   inherit system;
   binarySuffix =
@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
   binaryName = "tailwindcss-extra-${binarySuffix}";
   src = fetchurl {
     url = "https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v${version}/${binaryName}";
-    hash = "sha256-mFZ4oW7gj/1ZB9L7ZjzmF0sIcPXc2RtXaWB2jvWopJM=";
+    hash = "sha256-5fPsGtRBj1HJJci0cPVVCxukq3cRXnU65381yiftDuQ=";
   };
 
   phases = ["installPhase" "patchPhase"];
