@@ -5,7 +5,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "tailwind-cli-extra";
-  version = "1.7.27";
+  version = "2.0.9";
 
   inherit system;
   binarySuffix =
